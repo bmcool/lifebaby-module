@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7969401C16FE09BB00302DFA /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7969401A16FE09BB00302DFA /* PedometerViewController.m */; };
 		79A8EAEC16FDAEDD00DFD30B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A8EAEB16FDAEDD00DFD30B /* Foundation.framework */; };
 		79A8EAF116FDAEDD00DFD30B /* module.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A8EAF016FDAEDD00DFD30B /* module.h */; };
 		79A8EAF316FDAEDD00DFD30B /* module.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A8EAF216FDAEDD00DFD30B /* module.m */; };
+		79A8EB2F16FDB14500DFD30B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A8EB2E16FDB14500DFD30B /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +28,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7969401A16FE09BB00302DFA /* PedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
+		7969401B16FE09BB00302DFA /* PedometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
 		79A8EAE816FDAEDD00DFD30B /* libmodule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmodule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A8EAEB16FDAEDD00DFD30B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79A8EAEF16FDAEDD00DFD30B /* module-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "module-Prefix.pch"; sourceTree = "<group>"; };
 		79A8EAF016FDAEDD00DFD30B /* module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
 		79A8EAF216FDAEDD00DFD30B /* module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = module.m; sourceTree = "<group>"; };
+		79A8EB2E16FDB14500DFD30B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A8EB2F16FDB14500DFD30B /* UIKit.framework in Frameworks */,
 				79A8EAEC16FDAEDD00DFD30B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7969401816FE098100302DFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7969401A16FE09BB00302DFA /* PedometerViewController.m */,
+				7969401B16FE09BB00302DFA /* PedometerViewController.h */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		79A8EADD16FDAEDD00DFD30B = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +80,7 @@
 		79A8EAEA16FDAEDD00DFD30B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79A8EB2E16FDB14500DFD30B /* UIKit.framework */,
 				79A8EAEB16FDAEDD00DFD30B /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -73,6 +89,7 @@
 		79A8EAED16FDAEDD00DFD30B /* module */ = {
 			isa = PBXGroup;
 			children = (
+				7969401816FE098100302DFA /* ViewController */,
 				79A8EAF016FDAEDD00DFD30B /* module.h */,
 				79A8EAF216FDAEDD00DFD30B /* module.m */,
 				79A8EAEE16FDAEDD00DFD30B /* Supporting Files */,
@@ -140,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A8EAF316FDAEDD00DFD30B /* module.m in Sources */,
+				7969401C16FE09BB00302DFA /* PedometerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +173,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -181,6 +200,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -235,6 +255,7 @@
 				79A8EAF816FDAEDD00DFD30B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
