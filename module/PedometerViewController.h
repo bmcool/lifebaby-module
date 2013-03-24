@@ -27,6 +27,5 @@
 @property (assign, nonatomic, readonly) int numSteps;
 
 -(void) resetNumSteps;
--(void) incrNumSteps;
 
 @end

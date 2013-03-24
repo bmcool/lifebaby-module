@@ -15,7 +15,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -57,15 +56,20 @@
 	[super viewDidDisappear:animated];
 }
 
+#pragma mark -
+#pragma mark - Orientation methods
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-// UIAccelerometerDelegate method, called when the device accelerates.
--(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+#pragma mark -
+#pragma mark - UIAccelerometerDelegate methods
 
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+{
     float xx = acceleration.x;
     float yy = acceleration.y;
     float zz = acceleration.z;
@@ -88,18 +92,35 @@
     
 }
 
+#pragma mark -
+#pragma mark - Private methods
+
 - (void)wakeUp {
     isSleeping = NO;
 }
+
+#pragma mark -
+#pragma mark - Public methods
 
 -(void) resetNumSteps
 {
     _numSteps = 0;
 }
 
+#pragma mark -
+#pragma mark - PedometerDelegate optional methods
+
 -(void) incrNumSteps
 {
     _numSteps += 1;
+}
+
+#pragma mark -
+#pragma mark - dealloc
+
+-(void)dealloc
+{
+    [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 }
 
 @end
