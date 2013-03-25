@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 lifebaby. All rights reserved.
 //
 
+#import <objc/runtime.h>
+
 @interface NSObject (PropertyListing)
 
 - (NSDictionary *)properties_aps;

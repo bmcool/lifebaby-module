@@ -12,48 +12,29 @@
 
 @implementation ShakeViewController
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Enable listening to the accelerometer
-    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:1.0 / kUpdateFrequency];
-    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    
+    motionManager = [[CMMotionManager alloc] init];
+    [motionManager setAccelerometerUpdateInterval:1.0 / kUpdateFrequency];
+    [motionManager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+        [self performSelectorOnMainThread:@selector(updateAccelerometerInfo:) withObject:accelerometerData waitUntilDone:NO];
+    }];
     
     px = py = pz = 0;
     _numSteps = 0;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    
+    [motionManager stopAccelerometerUpdates];
+    
+    motionManager = nil;
 }
 
 #pragma mark -
@@ -66,14 +47,16 @@
 }
 
 #pragma mark -
-#pragma mark - UIAccelerometerDelegate methods
+#pragma mark - Update accelerometer info methods
 
--(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+-(void) updateAccelerometerInfo:(CMAccelerometerData *)accelerometerData
 {
+    CMAcceleration acceleration = accelerometerData.acceleration;
+    
     float xx = acceleration.x;
     float yy = acceleration.y;
     float zz = acceleration.z;
-        
+    
     float dot = (px * xx) + (py * yy) + (pz * zz);
     float a = ABS(sqrt(px * px + py * py + pz * pz));
     float b = ABS(sqrt(xx * xx + yy * yy + zz * zz));
@@ -89,7 +72,6 @@
     }
     
     px = xx; py = yy; pz = zz;
-    
 }
 
 #pragma mark -
@@ -113,14 +95,6 @@
 -(void) incrNumSteps
 {
     _numSteps += 1;
-}
-
-#pragma mark -
-#pragma mark - dealloc
-
--(void)dealloc
-{
-    [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 }
 
 @end

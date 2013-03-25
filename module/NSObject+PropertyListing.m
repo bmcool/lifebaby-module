@@ -7,7 +7,6 @@
 //
 
 #import "NSObject+PropertyListing.h"
-#import <objc/runtime.h>
 
 @implementation NSObject (PropertyListing)
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MotionViewController.h"
 
 @protocol ShakeDelegate
 
@@ -15,7 +15,9 @@
 
 @end
 
-@interface ShakeViewController : UIViewController <UIAccelerometerDelegate, ShakeDelegate> {
+@interface ShakeViewController : MotionViewController <ShakeDelegate> {
+    CMMotionManager *motionManager;
+    
     float px;
     float py;
     float pz;
