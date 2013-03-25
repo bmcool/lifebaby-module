@@ -6,11 +6,11 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PedometerViewController.h"
+#import "ShakeViewController.h"
 
 #define kUpdateFrequency    60.0
 
-@implementation PedometerViewController
+@implementation ShakeViewController
 
 - (void)didReceiveMemoryWarning
 {

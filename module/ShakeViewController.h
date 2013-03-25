@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PedometerDelegate
+@protocol ShakeDelegate
 
 @optional
 -(void) incrNumSteps;
 
 @end
 
-@interface PedometerViewController : UIViewController <UIAccelerometerDelegate, PedometerDelegate> {
+@interface ShakeViewController : UIViewController <UIAccelerometerDelegate, ShakeDelegate> {
     float px;
     float py;
     float pz;
@@ -24,8 +24,6 @@
     BOOL isSleeping;
 }
 
-@property (assign, nonatomic, readonly) int numSteps;
-
--(void) resetNumSteps;
+@property (assign, nonatomic) int numSteps;
 
 @end
