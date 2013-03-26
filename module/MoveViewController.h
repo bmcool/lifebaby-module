@@ -8,6 +8,16 @@
 
 #import "MotionViewController.h"
 
-@interface MoveViewController : MotionViewController
+@protocol MoveDelegate
+
+@required
+- (void)locationUpdate:(CLLocation *)location distance:(CLLocationDistance)distance;
+
+@optional
+- (void)locationError:(NSError *)error;
+
+@end
+
+@interface MoveViewController : MotionViewController<MoveDelegate>
 
 @end

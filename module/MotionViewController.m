@@ -30,7 +30,11 @@
 	// shared at AppDelegate is better.
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
-    [locationManager startUpdatingLocation];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    if ([CLLocationManager locationServicesEnabled]){
+        [locationManager startUpdatingLocation];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated

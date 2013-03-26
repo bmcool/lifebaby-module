@@ -33,14 +33,25 @@
 {
     if (newLocation.horizontalAccuracy > 0)
     {
-        NSLog(@"newLocation.coordinate.latitude = %f", newLocation.coordinate.latitude);
-        NSLog(@"newLocation.coordinate.latitude = %f", newLocation.coordinate.longitude);
-        NSLog(@"newLocation.coordinate.latitude = %f", newLocation.altitude);
-        
-        NSLog(@"oldLocation.coordinate.latitude = %f", oldLocation.coordinate.latitude);
-        NSLog(@"oldLocation.coordinate.latitude = %f", oldLocation.coordinate.longitude);
-        NSLog(@"oldLocation.coordinate.latitude = %f", oldLocation.altitude);
+        CLLocationDistance distance = [newLocation distanceFromLocation:oldLocation];
+        if (distance > 0 && newLocation.speed > 0) {
+            [self locationUpdate:newLocation distance:distance];
+        }
     }
+}
+
+-(void) locationUpdate:(CLLocation *)location distance:(CLLocationDistance)distance
+{
+    NSLog(@"Not Implemented %s", __FUNCTION__);
+}
+
+-(void) locationError:(NSError *)error
+{
+    NSLog(@"Not Implemented %s", __FUNCTION__);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [self locationError:error];
 }
 
 - (void)didReceiveMemoryWarning
