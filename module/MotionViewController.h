@@ -14,5 +14,4 @@
     CLLocationManager *locationManager;
 }
 
-
 @end

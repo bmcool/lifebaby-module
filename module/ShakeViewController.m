@@ -8,7 +8,7 @@
 
 #import "ShakeViewController.h"
 
-#define kUpdateFrequency    60.0
+#define kUpdateFrequency 60.0
 
 @implementation ShakeViewController
 
@@ -90,7 +90,7 @@
 }
 
 #pragma mark -
-#pragma mark - PedometerDelegate optional methods
+#pragma mark - ShakeDelegate optional methods
 
 -(void) incrNumSteps
 {

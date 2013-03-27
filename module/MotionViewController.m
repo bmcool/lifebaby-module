@@ -32,7 +32,14 @@
     [locationManager setDelegate:self];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    if ([CLLocationManager locationServicesEnabled]){
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+    
+    if ([CLLocationManager locationServicesEnabled]) {
         [locationManager startUpdatingLocation];
     }
 }
@@ -42,14 +49,14 @@
 	[super viewDidDisappear:animated];
     
     [locationManager stopUpdatingLocation];
-    
-    locationManager = nil;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [locationManager stopUpdatingLocation];
+    locationManager = nil;
 }
 
 @end

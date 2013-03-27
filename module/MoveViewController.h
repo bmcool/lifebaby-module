@@ -11,13 +11,17 @@
 @protocol MoveDelegate
 
 @required
-- (void)locationUpdate:(CLLocation *)location distance:(CLLocationDistance)distance;
+- (void)locationUpdate:(CLLocation *)location distance:(CLLocationDistance)distance timeInterval:(NSTimeInterval)timeInterval;
 
 @optional
 - (void)locationError:(NSError *)error;
+- (void)locationLongTimeNoUpdate;
 
 @end
 
-@interface MoveViewController : MotionViewController<MoveDelegate>
+@interface MoveViewController : MotionViewController<MoveDelegate> {
+    NSTimer *detectLocationUpdateStatusTimer;
+    NSDate *lastUpdateTime;
+}
 
 @end
