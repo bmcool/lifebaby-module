@@ -12,6 +12,7 @@
 		796F61B21700D67F0049576F /* MotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F61B11700D67F0049576F /* MotionViewController.m */; };
 		797F6592170358F900D01C5B /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 797F658F170358F900D01C5B /* Station.m */; };
 		797F6593170358F900D01C5B /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 797F6591170358F900D01C5B /* Weather.m */; };
+		7982693F17040C3C00A6268E /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7982693E17040C3C00A6268E /* NSArray+Addition.m */; };
 		799E40F4170314D500EDDFB1 /* OpenWeatherMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E40F3170314D500EDDFB1 /* OpenWeatherMap.m */; };
 		799E40FB17031BEB00EDDFB1 /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E40F917031BEB00EDDFB1 /* Http.m */; };
 		799E40FE17031F0A00EDDFB1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E40FD17031F0A00EDDFB1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -45,6 +46,8 @@
 		797F658F170358F900D01C5B /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		797F6590170358F900D01C5B /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		797F6591170358F900D01C5B /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		7982693D17040C3C00A6268E /* NSArray+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addition.h"; sourceTree = "<group>"; };
+		7982693E17040C3C00A6268E /* NSArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addition.m"; sourceTree = "<group>"; };
 		799E40F2170314D500EDDFB1 /* OpenWeatherMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMap.h; sourceTree = "<group>"; };
 		799E40F3170314D500EDDFB1 /* OpenWeatherMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMap.m; sourceTree = "<group>"; };
 		799E40F817031BEB00EDDFB1 /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				79A204B61700448D00E3F564 /* NSObject+PropertyListing.m */,
 				799E40FC17031F0A00EDDFB1 /* JSONKit.h */,
 				799E40FD17031F0A00EDDFB1 /* JSONKit.m */,
+				7982693D17040C3C00A6268E /* NSArray+Addition.h */,
+				7982693E17040C3C00A6268E /* NSArray+Addition.m */,
 				79A8EAEE16FDAEDD00DFD30B /* Supporting Files */,
 			);
 			path = module;
@@ -220,6 +225,7 @@
 				799E40FE17031F0A00EDDFB1 /* JSONKit.m in Sources */,
 				797F6592170358F900D01C5B /* Station.m in Sources */,
 				797F6593170358F900D01C5B /* Weather.m in Sources */,
+				7982693F17040C3C00A6268E /* NSArray+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

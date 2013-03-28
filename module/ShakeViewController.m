@@ -25,7 +25,7 @@
     }];
     
     px = py = pz = 0;
-    _numSteps = 0;
+    _shakeCount = 0;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -67,7 +67,7 @@
         if (!isSleeping) {
             isSleeping = YES;
             [self performSelector:@selector(wakeUp) withObject:nil afterDelay:0.3];
-            [self incrNumSteps];
+            [self incrShakeCount];
         }
     }
     
@@ -84,17 +84,17 @@
 #pragma mark -
 #pragma mark - Public methods
 
--(void) resetNumSteps
+-(void) resetShakeCount
 {
-    _numSteps = 0;
+    _shakeCount = 0;
 }
 
 #pragma mark -
 #pragma mark - ShakeDelegate optional methods
 
--(void) incrNumSteps
+-(void) incrShakeCount
 {
-    _numSteps += 1;
+    _shakeCount += 1;
 }
 
 @end

@@ -11,7 +11,7 @@
 @protocol ShakeDelegate
 
 @optional
--(void) incrNumSteps;
+-(void) incrShakeCount;
 
 @end
 
@@ -26,6 +26,6 @@
     BOOL isSleeping;
 }
 
-@property (assign, nonatomic) int numSteps;
+@property (assign, nonatomic) int shakeCount;
 
 @end
