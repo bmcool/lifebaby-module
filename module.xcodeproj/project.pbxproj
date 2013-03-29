@@ -20,6 +20,10 @@
 		79A204B71700448D00E3F564 /* NSObject+PropertyListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A204B61700448D00E3F564 /* NSObject+PropertyListing.m */; };
 		79A8EAF116FDAEDD00DFD30B /* module.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A8EAF016FDAEDD00DFD30B /* module.h */; };
 		79A8EAF316FDAEDD00DFD30B /* module.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A8EAF216FDAEDD00DFD30B /* module.m */; };
+		79CA72C017058F070077AB51 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA72BF17058F070077AB51 /* UIView+Addition.m */; };
+		79CA73171705C8930077AB51 /* UIViewController+StoryboardExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA73161705C8930077AB51 /* UIViewController+StoryboardExtend.m */; };
+		79CA73191705CD4B0077AB51 /* MethodSwizzle.c in Sources */ = {isa = PBXBuildFile; fileRef = 79CA73181705CD4B0077AB51 /* MethodSwizzle.c */; };
+		79CA731F1705CEF40077AB51 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA731E1705CEF40077AB51 /* NSObject+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +66,14 @@
 		79A8EAEF16FDAEDD00DFD30B /* module-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "module-Prefix.pch"; sourceTree = "<group>"; };
 		79A8EAF016FDAEDD00DFD30B /* module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
 		79A8EAF216FDAEDD00DFD30B /* module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = module.m; sourceTree = "<group>"; };
+		79CA72BE17058F070077AB51 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		79CA72BF17058F070077AB51 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		79CA73151705C8930077AB51 /* UIViewController+StoryboardExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StoryboardExtend.h"; sourceTree = "<group>"; };
+		79CA73161705C8930077AB51 /* UIViewController+StoryboardExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StoryboardExtend.m"; sourceTree = "<group>"; };
+		79CA73181705CD4B0077AB51 /* MethodSwizzle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MethodSwizzle.c; sourceTree = "<group>"; };
+		79CA731D1705CEF40077AB51 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		79CA731E1705CEF40077AB51 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		79CA742F1705E0760077AB51 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,20 +148,15 @@
 		79A8EAED16FDAEDD00DFD30B /* module */ = {
 			isa = PBXGroup;
 			children = (
+				79CA72CC1705924B0077AB51 /* Additions */,
 				797F658C170358E000D01C5B /* OpenWeatherMap */,
 				7969401816FE098100302DFA /* ViewController */,
 				799E40F817031BEB00EDDFB1 /* Http.h */,
 				799E40F917031BEB00EDDFB1 /* Http.m */,
 				79A8EAF016FDAEDD00DFD30B /* module.h */,
 				79A8EAF216FDAEDD00DFD30B /* module.m */,
-				79A20493170001AC00E3F564 /* NSUserDefaults+MPSecureUserDefaults.h */,
-				79A20494170001AC00E3F564 /* NSUserDefaults+MPSecureUserDefaults.m */,
-				79A204B51700448D00E3F564 /* NSObject+PropertyListing.h */,
-				79A204B61700448D00E3F564 /* NSObject+PropertyListing.m */,
 				799E40FC17031F0A00EDDFB1 /* JSONKit.h */,
 				799E40FD17031F0A00EDDFB1 /* JSONKit.m */,
-				7982693D17040C3C00A6268E /* NSArray+Addition.h */,
-				7982693E17040C3C00A6268E /* NSArray+Addition.m */,
 				79A8EAEE16FDAEDD00DFD30B /* Supporting Files */,
 			);
 			path = module;
@@ -161,6 +168,27 @@
 				79A8EAEF16FDAEDD00DFD30B /* module-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79CA72CC1705924B0077AB51 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				79CA742F1705E0760077AB51 /* MethodSwizzle.h */,
+				79CA73181705CD4B0077AB51 /* MethodSwizzle.c */,
+				7982693D17040C3C00A6268E /* NSArray+Addition.h */,
+				7982693E17040C3C00A6268E /* NSArray+Addition.m */,
+				79CA72BE17058F070077AB51 /* UIView+Addition.h */,
+				79CA72BF17058F070077AB51 /* UIView+Addition.m */,
+				79A20493170001AC00E3F564 /* NSUserDefaults+MPSecureUserDefaults.h */,
+				79A20494170001AC00E3F564 /* NSUserDefaults+MPSecureUserDefaults.m */,
+				79A204B51700448D00E3F564 /* NSObject+PropertyListing.h */,
+				79A204B61700448D00E3F564 /* NSObject+PropertyListing.m */,
+				79CA73151705C8930077AB51 /* UIViewController+StoryboardExtend.h */,
+				79CA73161705C8930077AB51 /* UIViewController+StoryboardExtend.m */,
+				79CA731D1705CEF40077AB51 /* NSObject+Swizzle.h */,
+				79CA731E1705CEF40077AB51 /* NSObject+Swizzle.m */,
+			);
+			name = Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +254,10 @@
 				797F6592170358F900D01C5B /* Station.m in Sources */,
 				797F6593170358F900D01C5B /* Weather.m in Sources */,
 				7982693F17040C3C00A6268E /* NSArray+Addition.m in Sources */,
+				79CA72C017058F070077AB51 /* UIView+Addition.m in Sources */,
+				79CA73171705C8930077AB51 /* UIViewController+StoryboardExtend.m in Sources */,
+				79CA73191705CD4B0077AB51 /* MethodSwizzle.c in Sources */,
+				79CA731F1705CEF40077AB51 /* NSObject+Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

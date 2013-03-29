@@ -63,7 +63,8 @@
     
     dot /= (a * b);
     
-    if (dot <= 0.82) {
+    // original 0.82
+    if (dot <= 0.85) {
         if (!isSleeping) {
             isSleeping = YES;
             [self performSelector:@selector(wakeUp) withObject:nil afterDelay:0.3];

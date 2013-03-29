@@ -26,12 +26,14 @@
 
 -(CGFloat) tempC
 {
-    return self.temp - 273.15;
+    // just for normal environment
+    return MAX(self.temp - 273.15, 0);
 }
 
 -(CGFloat) tempF
 {
-    return self.temp * 9/5 - 459.67;
+    // just for normal environment
+    return MAX(self.temp * 9/5 - 459.67, 0);
 }
 
 @end

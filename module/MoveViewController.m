@@ -80,17 +80,17 @@
 
 -(void) locationUpdate:(CLLocation *)location distance:(CLLocationDistance)distance timeInterval:(NSTimeInterval)timeInterval
 {
-    NSLog(@"Not Implemented %s", __FUNCTION__);
+    NSLog(@"Not Implemented %s", __PRETTY_FUNCTION__);
 }
 
 -(void) locationError:(NSError *)error
 {
-    NSLog(@"Not Implemented %s", __FUNCTION__);
+    NSLog(@"Not Implemented %s", __PRETTY_FUNCTION__);
 }
 
 -(void) locationLongTimeNoUpdate
 {
-    NSLog(@"Not Implemented %s", __FUNCTION__);
+    NSLog(@"Not Implemented %s", __PRETTY_FUNCTION__);
 }
 
 @end
