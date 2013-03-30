@@ -10,10 +10,9 @@
 #import "MethodSwizzle.h"
 
 @implementation NSObject (Swizzle)
+
 + (void)swizzleMethod:(SEL)orig_sel withMethod:(SEL)alt_sel {
-    NSString *originalMethodName = [NSString stringWithUTF8String:sel_getName(orig_sel)];
-    NSString *alternateMethodName = [NSString stringWithUTF8String:sel_getName(alt_sel)];
-    NSLog(@"Attempting to swizzle in class '%@': swapping method '%@' with '%@'...",[self class], originalMethodName, alternateMethodName);
+    NSLog(@"Attempting to swizzle in class '%@': swapping method '%s' with '%s'...",[self class], sel_getName(orig_sel), sel_getName(alt_sel));
 	
     Swizzle([self class], orig_sel, alt_sel);
 }
