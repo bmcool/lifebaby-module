@@ -10,6 +10,8 @@
 
 @interface UIViewController (StoryboardExtend)
 
--(void) storyboardXibViewToXib;
+-(void) extendViewWillAppear;
+-(void) extendViewDidDisAppear;
+-(void) extendViewDidLoad;
 
 @end
